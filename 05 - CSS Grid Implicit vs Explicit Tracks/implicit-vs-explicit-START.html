@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/style.css">
-  <title>CSS Grid Implicit vs Explicit Grid Tracks!</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>CSS Grid Implicit vs Explicit Grid Tracks!</title>
+  </head>
 
-<body>
-  <div class="container">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-  </div>
+  <body>
+    <h4>explicit columns - cols I created myself</h4>
+    <h4>implicit rows - browser creates rowse for us</h4>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+    </div>
 
-  <style>
-    .container {
-      display: grid;
-    }
-  </style>
-</body>
+    <style>
+      h4 {
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+      }
+
+      .container {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 200px 400px;
+        grid-template-rows: 50px 80px;
+
+        /* implicit rows created by browser are 400px high and 60px high */
+        grid-auto-rows: 400px 60px;
+
+        /* grid-auto-columns: 100px; */
+      }
+    </style>
+  </body>
 
 </html>
