@@ -28,3 +28,81 @@ h6 {
   font-size: 1.5em;
 }
 
+.codepen{
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr 1fr auto;
+}
+
+.codepen>*{
+  /* border: 1px solid yellowgreen; */
+}
+
+.code{
+  background:#1d1e22;
+  color: grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top: 2px solid grey;
+}
+
+.editor{
+  border: 3px solid black;
+}
+
+.editor{
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.editor__header{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.editor__code{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+}
+
+.editor__gutter{
+  display: grid;
+}
+
+.editor__number{
+  color: #fff;
+}
+
+textarea{
+  color: gray;
+  border: none;
+  background: transparent;
+}
+
+.button{
+  border: 3px solid #343436;
+  background: #343436;
+  color: #fff;
+  border-radius: 5px;
+}
+
+header{
+  display: grid;
+  background: black;
+  color: white;
+  grid-template-columns: 1fr repeat(3, minmax(60px, auto));
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+
+.preview{
+  display: grid;
+}
+
+footer{
+  border-top: 1px solid gray;
+  background: #1d1e22;
+}
